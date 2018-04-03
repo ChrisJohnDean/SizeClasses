@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="splitview1_3"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,12 +13,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SizeClasses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQr-v7-KHk">
+                                <rect key="frame" x="127" y="501.5" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="compact height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mp-hU-TEy">
+                                <rect key="frame" x="308" y="151.66666666666666" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="regular width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9Q-GO-wlx">
+                                <rect key="frame" x="333.5" y="585" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PQr-v7-KHk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4m-Vo-uKW"/>
+                            <constraint firstItem="3mp-hU-TEy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MDt-hl-lyf"/>
+                            <constraint firstItem="N9Q-GO-wlx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nsi-g4-E7h"/>
+                            <constraint firstItem="PQr-v7-KHk" firstAttribute="top" secondItem="3mp-hU-TEy" secondAttribute="bottom" constant="24" id="oGE-6D-bDb"/>
+                            <constraint firstItem="PQr-v7-KHk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rIF-PC-HqF"/>
+                            <constraint firstItem="N9Q-GO-wlx" firstAttribute="top" secondItem="PQr-v7-KHk" secondAttribute="bottom" constant="62.333333333333343" id="waD-Mj-9ZD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3mp-hU-TEy"/>
+                                <exclude reference="N9Q-GO-wlx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MDt-hl-lyf"/>
+                                <exclude reference="oGE-6D-bDb"/>
+                                <exclude reference="Nsi-g4-E7h"/>
+                                <exclude reference="waD-Mj-9ZD"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="3mp-hU-TEy"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MDt-hl-lyf"/>
+                                <include reference="oGE-6D-bDb"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="N9Q-GO-wlx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Nsi-g4-E7h"/>
+                                <include reference="waD-Mj-9ZD"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
